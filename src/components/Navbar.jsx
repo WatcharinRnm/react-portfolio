@@ -4,15 +4,18 @@ import { Link, useLocation } from "react-router-dom";
 function Navbar() {
   const location = useLocation();
   const linkClass = (path) =>
-    "px-4 py-2" +
-    (location.pathname === path ? " font-bold underline" : "");
+    "px-4 py-2 transition hover:text-primary" +
+    (location.pathname === path ? " font-bold text-primary underline" : "");
 
   return (
-    <nav className="p-4 border-b flex gap-4 bg-white dark:bg-gray-800">
-      <Link to="/" className={linkClass("/")}>Home</Link>
-      <Link to="/about" className={linkClass("/about")}>About</Link>
-      <Link to="/projects" className={linkClass("/projects")}>Projects</Link>
-      <Link to="/contact" className={linkClass("/contact")}>Contact</Link>
+    <nav className="flex justify-between items-center px-8 py-4 border-b bg-white dark:bg-gray-800 shadow-sm">
+      <h1 className="text-xl font-semibold text-primary">Watcharin</h1>
+      <div className="flex gap-4">
+        <Link to="/" className={linkClass("/")}>Home</Link>
+        <Link to="/about" className={linkClass("/about")}>About</Link>
+        <Link to="/projects" className={linkClass("/projects")}>Projects</Link>
+        <Link to="/contact" className={linkClass("/contact")}>Contact</Link>
+      </div>
     </nav>
   );
 }

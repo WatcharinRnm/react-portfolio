@@ -22,11 +22,11 @@ function LanguageToggle() {
   };
 
   return (
-    <div className="p-4 flex justify-end gap-4 bg-gray-50 dark:bg-gray-700">
-      <button onClick={toggleLanguage} className="px-3 py-1 border rounded">
+    <div className="flex justify-end gap-4 px-8 py-2 bg-gray-100 dark:bg-gray-700">
+      <button onClick={toggleLanguage} className="px-4 py-1 border rounded">
         {i18n.language === "th" ? "EN" : "TH"}
       </button>
-      <button onClick={toggleTheme} className="px-3 py-1 border rounded">
+      <button onClick={toggleTheme} className="px-4 py-1 border rounded">
         ☀️ / 🌙
       </button>
     </div>
